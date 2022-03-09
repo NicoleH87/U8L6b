@@ -147,6 +147,10 @@ public class Encryptor
             }
             encryptedMessage = encryptedMessage.substring(numRows * numCols);
         }
+        while (decryptMes.substring(decryptMes.length() - 1).equals("A"))
+        {
+            decryptMes = decryptMes.substring(0, decryptMes.length() - 1);
+        }
         return decryptMes;
     }
 }
