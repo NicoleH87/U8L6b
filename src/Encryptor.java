@@ -89,8 +89,12 @@ public class Encryptor
         {
             fillBlock(message);
             encryptMes += encryptBlock();
-            message = message.substring(numRows * numCols);
+            if (i < time - 1)
+            {
+                message = message.substring(numRows * numCols);
+            }
         }
+
         return encryptMes;
     }
 
